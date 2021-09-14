@@ -10,6 +10,7 @@ import Logo from "./comp/header/Logo";
 // http://www.omdbapi.com/?
 // s=star wars&
 // apikey=fb99a468
+import AddFavorites from "./comp/AddFavorites";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -35,7 +36,7 @@ const App = () => {
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
       <div className="row">
-        <MovieList movies={movies} />
+        <MovieList movies={movies} FavoritesComps={AddFavorites}/>
       </div>
     </div>
   );
@@ -47,3 +48,4 @@ export default App;
 // 1 style
 // 2 material UI => bootstrap/css in general
 // 3 API slow/Inconsistent
+// 4 The lack of CSS skills stop me from progress my project
